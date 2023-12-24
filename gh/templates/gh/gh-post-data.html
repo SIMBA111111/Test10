@@ -1,0 +1,23 @@
+<!-- gh/gh-get-data.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Data</title>
+</head>
+<body>
+
+<h1>GitHub User Data</h1>
+
+{% if data %}
+    {% for key, value in data.items %}
+        <p>{{ key }}: {{ value }}</p>
+    {% endfor %}
+{% else %}
+    <p>No data available for the provided username.</p>
+{% endif %}
+
+</body>
+</html>
